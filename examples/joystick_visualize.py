@@ -4,6 +4,7 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import time
 import argparse
+import pybullet as p
 from quest_teleop.meta_quest import MetaQuest
 from quest_teleop.pybullet_simulators import PyBulletSimulator
 from typing import Dict
@@ -234,6 +235,11 @@ def main():
         simulator = PyBulletSimulator(gui=True)
         print("PyBullet simulator initialized")
         
+        # Set window title
+        p.configureDebugVisualizer(p.COV_ENABLE_GUI, 1)
+        p.resetDebugVisualizerCamera(cameraDistance=3, cameraYaw=45, cameraPitch=-30, cameraTargetPosition=[0, 0, 0])
+        # Note: PyBullet doesn't have direct window title setting, but we can add text overlay
+        
         # Create simulation objects
         create_simulation_objects(simulator)
         print("Simulation objects created")
@@ -245,6 +251,15 @@ def main():
         # Create controller
         controller = MetaQuestController(simulator, meta_quest, debug=args.debug)
         print("Controller initialized")
+        
+        # Add instruction text overlay
+        instruction_text = p.addUserDebugText(
+            text="Press hand trigger to activate control",
+            textPosition=[0, 0, 0.5],
+            textColorRGB=[1, 1, 0],  # Yellow text
+            textSize=1.5,
+            lifeTime=0  # Permanent text
+        )
         
         print("Starting main loop (Press Ctrl+C to stop)...")
         
