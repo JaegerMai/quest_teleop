@@ -50,7 +50,7 @@ Run the hand tracking visualization to see real-time hand data from Meta Quest:
 python examples/hand_visualize.py
 ```
 
-![Hand Tracking Demo](media/hand.mp4)
+![Hand Tracking Demo](media/hand.gif)
 
 #### Controller Joystick Visualization  
 Run the joystick visualization to see real-time controller data:
@@ -58,7 +58,7 @@ Run the joystick visualization to see real-time controller data:
 python examples/joystick_visualize.py
 ```
 
-![Controller Demo](media/joystick.mp4)
+![Controller Demo](media/joystick.gif)
 
 #### Controller Data Logger
 For debugging and testing controller connectivity:
