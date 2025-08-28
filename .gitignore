@@ -156,7 +156,6 @@ checkpoints/
 *.png
 *.jpg
 *.jpeg
-*.gif
 *.bmp
 *.tiff
 
