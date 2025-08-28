@@ -37,20 +37,6 @@ MANIFEST
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-
 # Translations
 *.mo
 *.pot
@@ -135,21 +121,6 @@ dmypy.json
 *.swo
 *~
 
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# VR/Quest specific files
-*.quest
-*.ovr
-quest_logs/
-vr_sessions/
-
 # Temporary files
 temp/
 tmp/
@@ -180,6 +151,8 @@ checkpoints/
 *.avi
 *.mov
 *.mkv
+# Allow documentation media files
+!media/**
 *.png
 *.jpg
 *.jpeg

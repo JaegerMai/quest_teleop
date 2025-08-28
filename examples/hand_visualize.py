@@ -7,9 +7,9 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import time
 import argparse
 import traceback
-from teleop.meta_quest_hand import MetaQuestHand
-from teleop.hand_types import HandJoint
-from teleop.pybullet_simulators import PyBulletHandSimulator
+from quest_teleop.meta_quest_hand import MetaQuestHand
+from quest_teleop.hand_types import HandJoint
+from quest_teleop.pybullet_simulators import PyBulletHandSimulator
 from scipy.spatial.transform import Rotation as R
 from typing import Dict
 

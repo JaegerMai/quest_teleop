@@ -16,7 +16,7 @@ A robotic arm teleoperation library based on Meta Quest VR controllers and hand 
 
 ### System Requirements
 - Python 3.8+
-- Meta Quest VR headset and controllers
+- Meta Quest 3 VR headset
 - Windows/Linux
 - PyBullet (for simulation visualization)
 
@@ -24,7 +24,7 @@ A robotic arm teleoperation library based on Meta Quest VR controllers and hand 
 
 1. Clone the project locally:
 ```bash
-git clone <repository-url>
+git clone https://github.com/JaegerMai/quest_teleop.git
 cd quest_teleop
 ```
 
@@ -33,4 +33,36 @@ cd quest_teleop
 pip install -e .
 ```
 
-3. Ensure Meta Quest controllers are connected and working
+
+## Usage
+
+### Step 1: Install Meta Quest APK
+Follow the instructions in `apk/README.md` to install the data sender app to your Meta Quest headset and launch the application.
+
+### Step 2: Configure Network
+Set your PC's IP address to **172.16.33.142** or update the Quest application settings to match your actual IP address.
+
+### Step 3: Run Visualization Examples
+
+#### Hand Tracking Visualization
+Run the hand tracking visualization to see real-time hand data from Meta Quest:
+```bash
+python examples/hand_visualize.py
+```
+
+![Hand Tracking Demo](media/hand.mp4)
+
+#### Controller Joystick Visualization  
+Run the joystick visualization to see real-time controller data:
+```bash
+python examples/joystick_visualize.py
+```
+
+![Controller Demo](media/joystick.mp4)
+
+#### Controller Data Logger
+For debugging and testing controller connectivity:
+```bash
+python examples/controller_data_logger.py
+```
+

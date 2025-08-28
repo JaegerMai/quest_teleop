@@ -4,8 +4,8 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import time
 import argparse
-from teleop.meta_quest import MetaQuest
-from teleop.pybullet_simulators import PyBulletSimulator
+from quest_teleop.meta_quest import MetaQuest
+from quest_teleop.pybullet_simulators import PyBulletSimulator
 from typing import Dict
 
 # Controller configuration constants
